@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Жансая қыз ұзату</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Marck+Script&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader">
+    <div class="preloader__seal">Ж</div>
+    <p>Шақыру ашылуда...</p>
+  </div>
+
+  <main class="page">
+    <button class="music-btn" id="musicBtn" aria-label="Музыканы қосу немесе өшіру">
+      <span id="musicIcon">▶</span>
+    </button>
+
+    <!-- Өз музыкаңызды assets/music.mp3 деп салып, төмендегі src-ты өзгертіңіз -->
+    <audio id="bgMusic" loop preload="none">
+      <source src="https://audio.jukehost.co.uk/FrroifVoaIX7sXOsp1OSo2iDEg221tVN" type="audio/mpeg">
+    </audio>
+
+    <section class="hero section" id="home">
+      <div class="hero__image" aria-hidden="true"></div>
+      <div class="hero__shade"></div>
+      <div class="hero__content reveal">
+        <p class="eyebrow">Қыз ұзату тойына шақыру</p>
+        <h1>Жансая</h1>
+        <div class="divider"><span></span></div>
+        <p class="hero__date">23 шілде 2026 жыл • 17:00</p>
+        <a class="scroll-link" href="#invite">Шақыруды оқу</a>
+      </div>
+    </section>
+
+    <section class="invite section paper" id="invite">
+      <div class="ornament ornament--top"></div>
+      <div class="container narrow reveal">
+        <p class="script" style="font-family: 'Great Vibes', 'Marck Script', cursive">Кадірлі</p>
+        <h2>Ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, әпке-жезде, дос-жарандар, әріптестер, көршілер!</h2>
+        <p class="lead">
+          Сіздерді аяулы қызымыз <strong>Жансаяның</strong> ұзату тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз.
+        </p>
+      </div>
+      <div class="ornament ornament--bottom"></div>
+    </section>
+
+    <section class="details section">
+      <div class="container">
+        <div class="section-title reveal">
+          <p class="script">Той салтанаты</p>
+          <h2>Күн тәртібі</h2>
+        </div>
+
+        <div class="cards">
+          <article class="detail-card reveal">
+            <div class="card-icon">♡</div>
+            <h3>Күні</h3>
+            <p>23 шілде 2026 жыл</p>
+            <span>Бейсенбі</span>
+          </article>
+          <article class="detail-card reveal">
+            <div class="card-icon">◷</div>
+            <h3>Уақыты</h3>
+            <p>Сағат 17:00-де</p>
+            <span>Қонақтарды қарсы алу</span>
+          </article>
+          <article class="detail-card reveal">
+            <div class="card-icon">⌖</div>
+            <h3>Мекенжай</h3>
+            <p>Өскемен қаласы</p>
+            <span>Сәтпаев көшесі, 15В</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="calendar-section section paper">
+      <div class="container reveal">
+        <p class="script">Күнтізбе</p>
+        <h2>23 шілде 2026</h2>
+        <div class="calendar-wrap">
+          <div class="calendar-month">Шілде</div>
+          <table class="calendar" aria-label="Шілде 2026 күнтізбесі">
+            <thead>
+              <tr>
+                <th>ДС</th><th>СС</th><th>СР</th><th>БС</th><th>ЖМ</th><th>СБ</th><th>ЖБ</th>
+              </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown section">
+      <div class="container reveal">
+        <p class="script">Той басталуына</p>
+        <div class="timer" id="timer">
+          <div><strong id="days">0</strong><span>күн</span></div>
+          <div><strong id="hours">0</strong><span>сағат</span></div>
+          <div><strong id="minutes">0</strong><span>минут</span></div>
+          <div><strong id="seconds">0</strong><span>секунд</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="place section paper" id="place">
+      <div class="container reveal">
+        <div class="section-title">
+          <p class="script">Отетін орны</p>
+          <h2>“КШТ” мейрамханасы</h2>
+          <p class="lead">Өскемен қаласы, Сәтпаев көшесі, 15В</p>
+        </div>
+        <div class="map-card">
+          <iframe
+            title="КШТ мейрамханасы картасы"
+            src="https://maps.google.com/maps?q=%D3%A8%D1%81%D0%BA%D0%B5%D0%BC%D0%B5%D0%BD%20%D2%9B%D0%B0%D0%BB%D0%B0%D1%81%D1%8B%20%D0%A1%D3%99%D1%82%D0%BF%D0%B0%D0%B5%D0%B2%20%D0%BA%D3%A9%D1%88%D0%B5%D1%81%D1%96%2015%D0%92%20%D0%9A%D0%A8%D0%A2%20%D0%BC%D0%B5%D0%B9%D1%80%D0%B0%D0%BC%D1%85%D0%B0%D0%BD%D0%B0%D1%81%D1%8B&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <a class="primary-link" target="_blank" rel="noopener" href="https://maps.google.com/?q=%D3%A8%D1%81%D0%BA%D0%B5%D0%BC%D0%B5%D0%BD%20%D2%9B%D0%B0%D0%BB%D0%B0%D1%81%D1%8B%20%D0%A1%D3%99%D1%82%D0%BF%D0%B0%D0%B5%D0%B2%20%D0%BA%D3%A9%D1%88%D0%B5%D1%81%D1%96%2015%D0%92%20%D0%9A%D0%A8%D0%A2%20%D0%BC%D0%B5%D0%B9%D1%80%D0%B0%D0%BC%D1%85%D0%B0%D0%BD%D0%B0%D1%81%D1%8B">Картадан ашу</a>
+      </div>
+    </section>
+
+    <section class="hosts section">
+      <div class="container narrow reveal">
+        <p class="script">Той иелері</p>
+        <h2>Медет — Назым</h2>
+        <p class="lead">Тойымыздың қадірлі қонағы болыңыздар!</p>
+      </div>
+    </section>
+
+    <section class="gallery section paper">
+      <div class="container reveal">
+        <p class="script">Естелік</p>
+        <h2>Салтанатты сәт</h2>
+        <!-- <div class="gallery-grid">
+          <img src="assets/hero.png" alt="Қыз ұзату салтанаты">
+          <img src="assets/invite-text.png" alt="Қыз ұзату шақыру мәтіні">
+          <img src="assets/date.png" alt="Той салтанаты күні">
+        </div> -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__seal">Ж</div>
+      <p>Жансаяның қыз ұзату тойы</p>
+      <span>23.07.2026</span>
+    </footer>
+  </main>
+
+  <script>
+    const preloader = document.getElementById('preloader');
+    window.addEventListener('load', () => {
+      setTimeout(() => preloader.classList.add('is-hidden'), 700);
+    });
+
+    const music = document.getElementById('bgMusic');
+    const musicBtn = document.getElementById('musicBtn');
+    const musicIcon = document.getElementById('musicIcon');
+
+    musicBtn.addEventListener('click', async () => {
+      if (music.paused) {
+        try {
+          await music.play();
+          musicIcon.textContent = 'Ⅱ';
+          musicBtn.classList.add('is-playing');
+        } catch (e) {
+          alert('Музыканы қосу үшін браузер рұқсаты қажет.');
+        }
+      } else {
+        music.pause();
+        musicIcon.textContent = '▶';
+        musicBtn.classList.remove('is-playing');
+      }
+    });
+
+    function buildCalendar() {
+      const body = document.getElementById('calendarBody');
+      const year = 2026;
+      const month = 6; // July, zero based
+      const firstDate = new Date(year, month, 1);
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const startIndex = (firstDate.getDay() + 6) % 7; // Monday first
+      let day = 1;
+      let html = '';
+
+      for (let row = 0; row < 6; row++) {
+        html += '<tr>';
+        for (let col = 0; col < 7; col++) {
+          const cellIndex = row * 7 + col;
+          if (cellIndex < startIndex || day > daysInMonth) {
+            html += '<td></td>';
+          } else {
+            const cls = day === 23 ? ' class="active-day"' : '';
+            html += `<td${cls}>${day}</td>`;
+            day++;
+          }
+        }
+        html += '</tr>';
+        if (day > daysInMonth) break;
+      }
+
+      body.innerHTML = html;
+    }
+
+    function updateCountdown() {
+      const target = new Date('2026-07-23T17:00:00+05:00').getTime();
+      const now = Date.now();
+      const diff = Math.max(target - now, 0);
+      const totalSeconds = Math.floor(diff / 1000);
+
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    buildCalendar();
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
